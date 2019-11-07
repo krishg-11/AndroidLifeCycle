@@ -7,12 +7,244 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text= "Android Life Cycle"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/SinceAppInstallation"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/SinceAppRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Since App Restart"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_margin="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"/>
+
+    <TextView
+        android:id="@+id/SinceAppInstallation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Since App Installation"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_margin="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+    <TextView
+        android:id="@+id/CreateCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created:"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SinceAppInstallation" />
+    <TextView
+        android:id="@+id/StartCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Started:"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CreateCount" />
+    <TextView
+        android:id="@+id/ResumeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resumed:"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/StartCount" />
+    <TextView
+        android:id="@+id/PauseCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paused:"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ResumeCount" />
+    <TextView
+        android:id="@+id/StopCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stopped:"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PauseCount" />
+    <TextView
+        android:id="@+id/RestartCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restarted:"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/StopCount" />
+    <TextView
+        android:id="@+id/DestroyCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destroyed:"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RestartCount" />
+    <TextView
+        android:id="@+id/created1Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
+        app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
+        app:layout_constraintBottom_toBottomOf="@id/CreateCount"
+        app:layout_constraintTop_toTopOf="@id/CreateCount"/>
+    <TextView
+        android:id="@+id/created2Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
+        app:layout_constraintBottom_toBottomOf="@id/CreateCount"
+        app:layout_constraintTop_toTopOf="@id/CreateCount"/>
+    <TextView
+        android:id="@+id/started1Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
+        app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
+        app:layout_constraintBottom_toBottomOf="@id/StartCount"
+        app:layout_constraintTop_toTopOf="@id/StartCount"/>
+    <TextView
+        android:id="@+id/started2Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
+        app:layout_constraintBottom_toBottomOf="@id/StartCount"
+        app:layout_constraintTop_toTopOf="@id/StartCount"/>
+    <TextView
+        android:id="@+id/resumed1Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
+        app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
+        app:layout_constraintBottom_toBottomOf="@id/ResumeCount"
+        app:layout_constraintTop_toTopOf="@id/ResumeCount"/>
+    <TextView
+        android:id="@+id/resumed2Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
+        app:layout_constraintBottom_toBottomOf="@id/ResumeCount"
+        app:layout_constraintTop_toTopOf="@id/ResumeCount"/>
+    <TextView
+        android:id="@+id/paused1Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
+        app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
+        app:layout_constraintBottom_toBottomOf="@id/PauseCount"
+        app:layout_constraintTop_toTopOf="@id/PauseCount"/>
+    <TextView
+        android:id="@+id/paused2Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
+        app:layout_constraintBottom_toBottomOf="@id/PauseCount"
+        app:layout_constraintTop_toTopOf="@id/PauseCount"/>
+    <TextView
+        android:id="@+id/stopped1Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
+        app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
+        app:layout_constraintBottom_toBottomOf="@id/StopCount"
+        app:layout_constraintTop_toTopOf="@id/StopCount"/>
+    <TextView
+        android:id="@+id/stopped2Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
+        app:layout_constraintBottom_toBottomOf="@id/StopCount"
+        app:layout_constraintTop_toTopOf="@id/StopCount"/>
+    <TextView
+        android:id="@+id/restarted1Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
+        app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
+        app:layout_constraintBottom_toBottomOf="@id/RestartCount"
+        app:layout_constraintTop_toTopOf="@id/RestartCount"/>
+    <TextView
+        android:id="@+id/restarted2Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
+        app:layout_constraintBottom_toBottomOf="@id/RestartCount"
+        app:layout_constraintTop_toTopOf="@id/RestartCount"/>
+    <TextView
+        android:id="@+id/destroyed1Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
+        app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
+        app:layout_constraintBottom_toBottomOf="@id/DestroyCount"
+        app:layout_constraintTop_toTopOf="@id/DestroyCount"/>
+    <TextView
+        android:id="@+id/destroyed2Counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "0"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
+        app:layout_constraintBottom_toBottomOf="@id/DestroyCount"
+        app:layout_constraintTop_toTopOf="@id/DestroyCount"/>
+    <Button
+        android:id="@+id/resetInstall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Reset"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
+        app:layout_constraintTop_toBottomOf="@id/destroyed1Counter"/>
+    <Button
+        android:id="@+id/resetRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Reset"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
+        app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
+        app:layout_constraintTop_toBottomOf="@id/destroyed2Counter"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
