@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"/>
+        app:layout_constraintVertical_bias="0.15"/>
 
     <TextView
         android:id="@+id/SinceAppInstallation"
@@ -42,63 +42,70 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/SinceAppRestart"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.15" />
     <TextView
         android:id="@+id/CreateCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Created:"
-        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SinceAppInstallation" />
+        app:layout_constraintTop_toBottomOf="@id/SinceAppInstallation"
+        app:layout_constraintBottom_toTopOf="@id/StartCount"/>
     <TextView
         android:id="@+id/StartCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Started:"
-        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/CreateCount" />
+        app:layout_constraintTop_toBottomOf="@id/CreateCount"
+        app:layout_constraintBottom_toTopOf="@id/ResumeCount"/>
     <TextView
         android:id="@+id/ResumeCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Resumed:"
-        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/StartCount" />
+        app:layout_constraintTop_toBottomOf="@id/StartCount"
+        app:layout_constraintBottom_toTopOf="@id/PauseCount"/>
     <TextView
         android:id="@+id/PauseCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Paused:"
-        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ResumeCount" />
+        app:layout_constraintTop_toBottomOf="@id/ResumeCount"
+        app:layout_constraintBottom_toTopOf="@id/StopCount"/>
     <TextView
         android:id="@+id/StopCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Stopped:"
-        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/PauseCount" />
+        app:layout_constraintTop_toBottomOf="@id/PauseCount"
+        app:layout_constraintBottom_toTopOf="@id/RestartCount"/>
     <TextView
         android:id="@+id/RestartCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Restarted:"
-        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/StopCount" />
+        app:layout_constraintTop_toBottomOf="@id/StopCount"
+        app:layout_constraintBottom_toTopOf="@id/DestroyCount"/>
     <TextView
         android:id="@+id/DestroyCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Destroyed:"
-        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/RestartCount" />
+        app:layout_constraintTop_toBottomOf="@id/RestartCount"
+        app:layout_constraintBottom_toTopOf="@id/resetInstall"/>
     <TextView
         android:id="@+id/created1Counter"
         android:layout_width="wrap_content"
@@ -233,7 +240,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintRight_toRightOf="@id/SinceAppInstallation"
         app:layout_constraintLeft_toLeftOf="@id/SinceAppInstallation"
-        app:layout_constraintTop_toBottomOf="@id/destroyed1Counter"/>
+        app:layout_constraintTop_toBottomOf="@id/destroyed1Counter"
+        app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
         android:id="@+id/resetRestart"
         android:layout_width="wrap_content"
@@ -242,7 +250,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintRight_toRightOf="@id/SinceAppRestart"
         app:layout_constraintLeft_toLeftOf="@id/SinceAppRestart"
-        app:layout_constraintTop_toBottomOf="@id/destroyed2Counter"/>
+        app:layout_constraintTop_toBottomOf="@id/destroyed2Counter"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 
